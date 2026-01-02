@@ -1,6 +1,14 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Bricolage_Grotesque } from 'next/font/google'
 import "./globals.css";
+
+const bricolageGrotesque = Bricolage_Grotesque({
+  subsets: ['latin'],
+  weight: ['200', '300', '400', '500', '600', '700', '800'], 
+  variable: '--font-bricolage',
+  fallback: ['arial', 'sans-serif'] 
+})
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,9 +31,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${bricolageGrotesque.variable}`}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${bricolageGrotesque.className} antialiased`}
       >
         {children}
       </body>

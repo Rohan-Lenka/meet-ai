@@ -59,7 +59,7 @@ const DashboardSidebar = () => {
               maxHeight: "72px",
             }}
           />
-          <p className="text-2xl font-semibold">Meet.AI</p>
+          <p className="text-2xl font-semibold">{process.env.NEXT_PUBLIC_WEBSITE_NAME}</p>
         </Link>
       </SidebarHeader>
       <div className="px-4 py-2">

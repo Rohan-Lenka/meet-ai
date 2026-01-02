@@ -214,7 +214,7 @@ export const SignUpView = () => {
           <div className="bg-radial from-sidebar-accent to-sidebar relative hidden md:flex flex-col items-center justify-center gap-y-4">
             <Image
               src="/logo.svg"
-              alt="Meet.AI logo"
+              alt="website logo"
               width={92}
               height={92}
               style={{
@@ -224,7 +224,7 @@ export const SignUpView = () => {
                 maxHeight: "92px",
               }}
             />
-            <p className="text-2xl font-semibold text-white">Meet.AI</p>
+            <p className="text-2xl font-semibold text-white">{process.env.NEXT_PUBLIC_WEBSITE_NAME}</p>
           </div>
         </CardContent>
       </Card>
